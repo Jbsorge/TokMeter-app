@@ -25,9 +25,7 @@ It lives quietly in your menu bar, updating continuously. Instead of switching b
 
 Whether you're vibe-coding, burning through API credits on a product, or juggling multiple AI subscriptions, TokMeter turns fragmented and delayed usage data into a clear, always-visible dashboard.
 
-```
-C: $1.23 | O: $0.45  =  $1.68
-```
+<img src="assets/menubar-mockup.svg" alt="TokMeter menu bar: C:42% O:17% | API $32.05" />
 
 ---
 

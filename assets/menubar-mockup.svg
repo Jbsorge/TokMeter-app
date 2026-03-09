@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="26" viewBox="0 0 360 26">
+  <rect width="360" height="26" rx="5" fill="#4a4a3d"/>
+  <text x="14" y="18" font-family="-apple-system, SF Pro Text, Helvetica Neue, sans-serif" font-size="13" font-weight="500">
+    <tspan fill="#d4956a">C:</tspan><tspan fill="#d4d4d4">42%</tspan>
+    <tspan fill="#d4d4d4"> </tspan>
+    <tspan fill="#5cb85c">O:</tspan><tspan fill="#d4d4d4">17%</tspan>
+    <tspan fill="#888888"> | </tspan>
+    <tspan fill="#d4d4d4">API $32.05</tspan>
+    <tspan fill="#d4d4d4"> </tspan>
+    <tspan fill="#5b9bd5">A</tspan><tspan fill="#5b9bd5" font-size="10" baseline-shift="super">1</tspan>
+  </text>
+</svg>
