@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="185" height="26" viewBox="0 0 185 26">
+  <rect width="185" height="26" rx="5" fill="#4a4a3d"/>
+  <text x="10" y="18" font-family="-apple-system, SF Pro Text, Helvetica Neue, sans-serif" font-size="13" font-weight="500">
+    <tspan fill="#d4956a">C:</tspan><tspan fill="#d4d4d4">42%</tspan>
+    <tspan fill="#d4d4d4"> </tspan>
+    <tspan fill="#5cb85c">O:</tspan><tspan fill="#d4d4d4">17%</tspan>
+    <tspan fill="#888888"> | </tspan>
+    <tspan fill="#d4d4d4">API $32.05</tspan>
+  </text>
+</svg>

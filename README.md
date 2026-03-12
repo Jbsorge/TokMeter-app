@@ -21,13 +21,11 @@ Track every token. Control every dollar. Never get surprised by an AI bill again
 
 TokMeter is a native macOS menu bar app that monitors your AI API spending and subscription usage across **Anthropic Claude**, **OpenAI**, and **Google Gemini** in real time.
 
+<p align="center"><img src="assets/menubar-mockup.svg" alt="TokMeter menu bar: C:42% O:17% | API $32.05" /></p>
+
 It lives quietly in your menu bar, updating continuously. Instead of switching between several provider consoles, you get instant visibility on live burn rate, per-model token counts, and subscription progress while you work — before your cloud bill does.
 
 Whether you're vibe-coding, burning through API credits on a product, or juggling multiple AI subscriptions, TokMeter turns fragmented and delayed usage data into a clear, always-visible dashboard.
-
-```
-C: $1.23 | O: $0.45  =  $1.68
-```
 
 ---
 
