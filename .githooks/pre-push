@@ -1,0 +1,126 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# TokMeter-app (public repo) pre-push hook
+# Every commit message becomes a line in GitHub Activity.
+# This hook shows each message and lets you approve, edit, or cancel.
+#
+# Install: git config core.hooksPath .githooks
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+CYAN='\033[0;36m'
+BOLD='\033[1m'
+NC='\033[0m'
+
+echo ""
+echo -e "${BOLD}=== TokMeter Public Repo — Activity Language Approval ===${NC}"
+echo -e "${YELLOW}This is the PUBLIC repo. Each commit message below will appear in GitHub Activity.${NC}"
+echo ""
+
+while read -r local_ref local_sha remote_ref remote_sha; do
+    branch=$(echo "$remote_ref" | sed 's|refs/heads/||')
+
+    if [ "$remote_sha" = "0000000000000000000000000000000000000000" ]; then
+        commit_list=$(git rev-list "$local_sha" --not --remotes 2>/dev/null || echo "")
+    else
+        commit_list=$(git rev-list "$remote_sha..$local_sha" 2>/dev/null || echo "")
+    fi
+
+    if [ -z "$commit_list" ]; then
+        echo -e "${GREEN}No new commits to push.${NC}"
+        continue
+    fi
+
+    commit_count=$(echo "$commit_list" | wc -l | tr -d ' ')
+
+    echo -e "${CYAN}Branch:${NC} $branch"
+    echo -e "${CYAN}Commits:${NC} $commit_count"
+    echo ""
+
+    # Force push warning
+    if ! git merge-base --is-ancestor "$remote_sha" "$local_sha" 2>/dev/null; then
+        echo -e "  ${RED}⚠  THIS IS A FORCE PUSH — it will rewrite public history${NC}"
+        echo ""
+    fi
+
+    # Show each commit and ask for approval
+    i=0
+    total=$commit_count
+    needs_rewrite=false
+
+    for sha in $commit_list; do
+        i=$((i + 1))
+        msg=$(git log -1 --format=%s "$sha")
+        body=$(git log -1 --format=%b "$sha")
+
+        echo -e "${BOLD}── Commit $i of $total ──${NC}"
+        echo ""
+        echo -e "  ${BOLD}Activity text:${NC} ${GREEN}${msg}${NC}"
+        if [ -n "$body" ]; then
+            echo ""
+            echo -e "  ${CYAN}Details (not shown in Activity list, only in commit view):${NC}"
+            echo "$body" | sed 's/^/    /'
+        fi
+        echo ""
+
+        echo -e "  ${YELLOW}Checklist:${NC}"
+        echo "    [ ] Reads like a product update, not an implementation log"
+        echo "    [ ] No internal details (mock builds, column widths, notarization)"
+        echo "    [ ] No AI/session references (CB19, Codex, Claude, etc.)"
+        echo ""
+
+        while true; do
+            printf "  ${BOLD}Approve this message?${NC} (${GREEN}yes${NC} / ${CYAN}edit${NC} / ${RED}cancel${NC}): "
+            read -r answer < /dev/tty
+
+            case "$answer" in
+                yes|y)
+                    echo -e "  ${GREEN}✓ Approved${NC}"
+                    echo ""
+                    break
+                    ;;
+                edit|e)
+                    echo ""
+                    echo -e "  ${CYAN}Current message:${NC} $msg"
+                    printf "  ${CYAN}New message:${NC} "
+                    read -r new_msg < /dev/tty
+
+                    if [ -z "$new_msg" ]; then
+                        echo -e "  ${YELLOW}Empty — keeping original.${NC}"
+                        echo ""
+                        continue
+                    fi
+
+                    # Can only amend the most recent commit
+                    head_sha=$(git rev-parse HEAD)
+                    if [ "$sha" = "$head_sha" ]; then
+                        git commit --amend -m "$new_msg" --no-verify --quiet
+                        echo -e "  ${GREEN}✓ Message updated to:${NC} $new_msg"
+                        echo ""
+                        break
+                    else
+                        echo -e "  ${RED}Cannot edit older commits interactively.${NC}"
+                        echo -e "  ${RED}Cancel the push, squash/rebase to fix messages, then push again.${NC}"
+                        echo ""
+                        exit 1
+                    fi
+                    ;;
+                cancel|c|n|no)
+                    echo ""
+                    echo -e "${RED}Push cancelled. Fix commit messages and try again.${NC}"
+                    exit 1
+                    ;;
+                *)
+                    echo -e "  ${YELLOW}Please type 'yes', 'edit', or 'cancel'.${NC}"
+                    ;;
+            esac
+        done
+    done
+
+    echo -e "${GREEN}All $total commit message(s) approved. Pushing to public repo...${NC}"
+    echo ""
+done
+
+exit 0

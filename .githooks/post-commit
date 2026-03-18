@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# TokMeter-app post-commit hook
+# Syncs docs to Dropbox and Google Drive.
+# NOTE: No auto-push — use git push manually (triggers pre-push approval workflow).
+
+echo "==> Syncing docs to cloud storage..."
+bash "$(dirname "$0")/../scripts/sync_docs_to_drive.sh" 2>/dev/null || true
+echo "==> Sync complete."
