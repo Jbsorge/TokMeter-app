@@ -2,9 +2,9 @@
 
 # TokMeter
 
-**Track your LLM usage by time**
+**Turn your AI usage bar into a timeline.**
 
-See how much you've used, how fast you used it and exactly when you spent your Claude, ChatGPT or Gemini quota — rather than just how much is left.
+See exactly when your quota moved, and match those spikes yourself to the repos, products and projects you were working on.
 
 [![macOS](https://img.shields.io/badge/macOS-13.0%2B-black?style=flat-square&logo=apple)](https://github.com/Jbsorge/TokMeter-app/releases/latest)
 [![License](https://img.shields.io/badge/license-Proprietary-blue?style=flat-square)](#license)
