@@ -34,7 +34,7 @@ TokMeter is a native macOS menu bar app that monitors your AI API spending and s
 
 It lives quietly in your menu bar, updating continuously. Instead of switching between several provider consoles, you get instant visibility on live burn rate, per-model token counts, and subscription progress while you work — before your cloud bill does.
 
-Whether you're vibe-coding, burning through API credits on a product, or juggling multiple AI subscriptions, TokMeter turns fragmented and delayed usage data into a clear, always-visible dashboard.
+Whether you're vibe-coding, burning through API credits on a product, or juggling multiple AI subscriptions, TokMeter turns fragmented, delayed, high-level usage numbers into a clear at-a-glance picture — with the hour-by-hour story one hover away.
 
 ---
 
