@@ -2,9 +2,9 @@
 
 # TokMeter
 
-**Real-time AI cost tracking for macOS**
+**Track your LLM usage by time**
 
-Track every token. Control every dollar. Never get surprised by an AI bill again.
+See how much you've used, how fast you used it and exactly when you spent your Claude, ChatGPT or Gemini quota — rather than just how much is left.
 
 [![macOS](https://img.shields.io/badge/macOS-13.0%2B-black?style=flat-square&logo=apple)](https://github.com/Jbsorge/TokMeter-app/releases/latest)
 [![License](https://img.shields.io/badge/license-Proprietary-blue?style=flat-square)](#license)
@@ -18,6 +18,15 @@ Track every token. Control every dollar. Never get surprised by an AI bill again
 ---
 
 ## What is TokMeter?
+
+You've spent 12% of your weekly quota since the last time you looked, three hours ago this morning. What was it that spent so much? You go to the Claude dashboard and all you get is one number: 67% used, Fable at 75% of weekly allowance, and reset five days from now at 6:00 pm. Two days into the week, two-thirds already gone — something is wrong, and you can't put your finger on it. What was it, so you can turn it off or calm it down?
+
+You click TokMeter in your menu bar and see it immediately: tall columns between 9:40 and 11:10, all on the Claude and Fable bars. Your agents spent the whole morning vibe-coding on the most expensive model — searches, routine edits, retries — work that Haiku or a cheaper model would have handled just as well. Switch the model down, watch the columns settle, and make it to Friday with quota to spare.
+
+TokMeter stays small. One bar shows where you are, the waveform shows when you got there, and the projection shows whether your current pace will make it to reset.
+
+It tracks only the providers you use, with model-specific limits where they are available. Add API consumption too if you need it.
+
 
 TokMeter is a native macOS menu bar app that monitors your AI API spending and subscription usage across **Anthropic Claude**, **OpenAI**, and **Google Gemini** in real time.
 
