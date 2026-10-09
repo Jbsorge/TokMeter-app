@@ -2,21 +2,19 @@
 
 # TokMeter
 
-**Turn your AI usage bar into a timeline.**
+**Your AI usage, always at a glance in your menu bar.**
 
-See exactly when your quota moved, and match those spikes yourself to the repos, products and projects you were working on.
+What did I just use? What did I just spend? How much have I got left? Should I push or slow down? TokMeter keeps the answers in one simple dropdown — only the tools you use, and only the ones you want to see.
 
 [![macOS](https://img.shields.io/badge/macOS-13.0%2B-black?style=flat-square&logo=apple)](https://github.com/Jbsorge/TokMeter-app/releases/latest)
 [![License](https://img.shields.io/badge/license-Proprietary-blue?style=flat-square)](#license)
 [![Download](https://img.shields.io/badge/Download-Free-brightgreen?style=flat-square)](https://github.com/Jbsorge/TokMeter-app/releases/latest)
-
 [**Download TokMeter**](#download) · [**See Features**](#features) · [**OpenClaw Support**](#tokmeter--openclaw--ai-agents)
 
 
 </div>
 
 ---
-
 ## What is TokMeter?
 
 You've spent 12% of your weekly quota since the last time you looked, three hours ago this morning. What was it that spent so much? You go to the Claude dashboard and all you get is one number: 67% used, Fable at 75% of weekly allowance, and reset five days from now at 6:00 pm. Two days into the week, two-thirds already gone — something is wrong, and you can't put your finger on it. What was it, so you can turn it off or calm it down?
@@ -25,104 +23,86 @@ You click TokMeter in your menu bar and see it immediately: tall columns between
 
 TokMeter stays small. One bar shows where you are, the waveform shows when you got there, and the projection shows whether your current pace will make it to reset.
 
-It tracks only the providers you use, with model-specific limits where they are available. Add API consumption too if you need it.
+It tracks only the providers you use, with model-specific limits where they are available. Add API or extra-usage spending too if you need it.
 
+TokMeter is a macOS menu bar app that brings subscription allowances and API or extra-usage spending together across **Anthropic Claude, OpenAI and ChatGPT, Google Gemini and Antigravity, Cursor, and OpenRouter**.
 
-TokMeter is a native macOS menu bar app that monitors your AI API spending and subscription usage across **Anthropic Claude**, **OpenAI**, and **Google Gemini** in real time.
+See direct Claude and ChatGPT plans, models bundled with Cursor, and usage routed through OpenRouter in one place. TokMeter makes overlapping usage visible, helping you decide where each kind of work belongs and whether every plan is earning its place.
+
+It shows the provider's own percentage or dollar figure when one is available. It does not invent a combined percentage for providers that expose separate limits.
 
 <p align="center"><img src="assets/menubar-mockup.svg" alt="TokMeter menu bar: C:42% O:17% | API $32.05" /></p>
 
-It lives quietly in your menu bar, updating continuously. Instead of switching between several provider consoles, you get instant visibility on live burn rate, per-model token counts, and subscription progress while you work — before your cloud bill does.
+It lives quietly in your menu bar, updating throughout the day. Instead of switching between provider consoles, you get an at-a-glance view of allowance pace, per-model detail where the provider supplies it, and API or extra-usage spending while you work.
 
-Whether you're vibe-coding, burning through API credits on a product, or juggling multiple AI subscriptions, TokMeter turns fragmented, delayed, high-level usage numbers into a clear at-a-glance picture — with the hour-by-hour story one hover away.
+Whether you're vibe-coding, burning through API credits on a product, or juggling multiple AI subscriptions, TokMeter turns fragmented usage numbers into a clear at-a-glance picture — with the hour-by-hour story one hover away.
 
 ---
-
 ## Why
 
-If you're running OpenClaw, coding assistants, or AI agents, you're burning through tokens with no visibility into what it's costing you while you work. The only way to check is to stop, log into each provider's API or subscription dashboard — across Claude, OpenAI, and Gemini — and look at billing data that can lag actual usage by hours or more.
+Checking your AI usage usually means opening each provider one by one—or opening a comprehensive dashboard full of providers, bars and features you never use. Either way, you still have to hunt for the answer.
 
-I built TokMeter because I run multiple AI models in parallel through OpenClaw and other tools and needed to know in real time what each pipeline was consuming. The alternative was switching between those dashboards constantly, or opening a surprise invoice at the end of the month.
-
-Now I just glance at the top of my screen.
+**TokMeter** gives you the answer in one dropdown: where each subscription stands, whether your current pace will last until reset, how much you may leave unused, and whether you are heading to run out early and have to wait or pay for extra usage. It puts that beside your extra spending, so you can see where tokens—or money—may be left on the table.
 
 ---
+## Only What You Use. Only What You Choose to See.
 
-## Only What You Use. Only What You Configure.
+**TokMeter** only shows the supported providers you use, all at a glance.
 
-Most AI cost trackers crowd your menu bar with every provider whether you use them or not.
-
-TokMeter only shows what you've actually set up. If you work with the Gemini API in your projects, you'll see Gemini API usage. If you also have a Gemini subscription, you'll see that too. Same for Claude or OpenAI / Codex. If it's not configured, it doesn't appear — because if it's not configured, you're not using it, and it's not worth your attention.
-
-**Claude Code, Codex, and now Gemini** — whatever your stack, TokMeter adapts to it.
+If you use one but do not want it in view, you can hide it yourself—and bring it back whenever you want.
 
 ---
-
 ## Features
 
 ### 🔴 Live Burn Rate — with Severity States
-TokMeter tracks your spend velocity in real time and surfaces it with three visual severity states: calm, elevated, and critical. You know at a glance whether you're on track or approaching a limit.
+**TokMeter** tracks your spend velocity and surfaces it with three visual severity states: calm, elevated, and critical. You know at a glance whether you're on track or approaching a limit.
 
 ### 💰 Multi-Provider Cost Tracking
-Monitor API usage and subscription progress across:
-- **Anthropic** — Claude API, all models. Claude Pro & Claude Max subscriptions
-- **OpenAI** — API usage, all models. ChatGPT Plus & GPT Pro subscriptions
-- **Google Gemini** — API usage (Pro, Flash), all models. Gemini Advanced subscription
+Monitor API or extra-usage spending and subscription progress across:
 
-### 🔍 What's in the Dropdown
-
-The menu bar shows your combined daily spend at a glance. Open the dropdown for the full picture:
-
-- Per-model cost breakdown across all active providers
-- Input / output / cache costs and token counts per model
-- **Latest** — cost of the most recent API activity since the last refresh
-- Today and month-to-date totals per provider
-- Subscription usage bars with per-model rate limit windows
-- Trends: know when you'll hit your limit relative to your reset date
-- Live vs snapshot freshness indicators
-- Export current data to Markdown
+- **Anthropic Claude** — Claude API costs and Claude Pro or Max subscription allowances
+- **OpenAI** — OpenAI API costs and ChatGPT Plus or Pro subscription allowances
+- **Google Gemini / Antigravity** — supported local API costs and the separate allowance pools the provider reports
+- **Cursor** — plan allowance, Cursor-model and other-model allocation where available, Grok Bot allowance where available, and provider-reported on-demand spending
+- **OpenRouter** — today and month-to-date costs, credit balance, and per-model spending detail
 
 ### 📊 Subscription Spend Projection
 Are you going to hit your usage limit before your plan resets? Or do you have enough headroom to push harder this week?
 
-TokMeter's spend projection answers that in real time. See where you stand against your reset date, understand your consumption pace, and decide — throttle back, or run that next batch knowing you have the room.
+Where available, TokMeter projects your allowance windows as readings update, showing whether your current pace is likely to last until reset. Decide whether to throttle back or push while you have room to spare.
 
 ### 🔐 Privacy-First Architecture
-TokMeter is built on a minimal-knowledge principle. Your API credentials are stored in your local system Keychain and used to query provider APIs directly from your device. TokMeter never accesses your conversation content — only usage and cost data from provider endpoints. Any future infrastructure will be held to the same standard: handling the minimum data needed, nothing more.
+TokMeter uses provider and supported local sources to calculate and display your usage, allowances and costs. It does not extract, display, transmit or persist conversation text. Manually entered Anthropic, OpenAI and OpenRouter keys remain in TokMeter’s owner-only local configuration.
 
-### ⚡ Native Performance
-Built in Swift for macOS. Fast, lightweight, and battery-friendly — exactly what a menu bar app should be.
+### ⚡ A Small Native macOS Menu-Bar App
+TokMeter is a signed macOS menu-bar application, notarised by Apple and built on Python and AppKit. It stays out of the Dock and keeps its interface in the menu bar, where the information is needed.
 
 ---
-
 ## TokMeter + OpenClaw + AI Agents
 
 Fed up with cron jobs, heartbeats, skills you didn't know were loading, or bloated agents quietly torching your token budget?
 
-If you run **OpenClaw** — or any combination of agentic AI and orchestration pipelines — TokMeter gives you the fastest visibility into model usage and cost short of logging into each provider's dashboard, right in your macOS menu bar.
+If you run **OpenClaw**, **Hermes**, or any combination of agentic AI and orchestration pipelines, TokMeter gives you fast visibility into model usage and cost without opening provider after provider, right in your macOS menu bar.
 
-TokMeter refreshes every two minutes. Each refresh shows the delta since the last poll, broken down by provider, model, and data type — input and output cost and tokens, cached or not. If you ran one thing and nothing else was active, that delta is a close proxy for your run cost. If you had parallel activity — another pipeline, a Ripple pass still processing — you're reading a combined signal, but the granularity over model, time, and token amounts helps you isolate the cost source.
+TokMeter records periodic provider readings and shows API or extra usage since you last checked, with provider, model and token detail where the source supplies it. If you ran one thing and nothing else was active, that change is a close proxy for your run cost. If several things were active, the timeline still shows when usage moved—down to the relevant part of the hour—so you can focus on what was happening then.
 
 Right in your menu bar, while you work.
 
 ---
-
 ## Why TokMeter?
-
 | Problem | TokMeter |
 |---|---|
-| Surprise invoice at end of month | Live AI costs and burn rate, always visible |
-| Multiple AI tools, no unified view | One dashboard for Claude, OpenAI, and Gemini |
-| Don't know if you'll hit your subscription limit | Spend projection against your reset date |
-| Menu bar cluttered with providers you don't use | Only configured providers appear |
-| Running OpenClaw with no cost feedback between runs | Delta since last refresh, broken down by provider, model & type (I/O + cached) |
-| Claude Code and Codex both running — which consumed what? | Per-provider model breakdown shows you where spend moved |
+| Surprise invoice at end of month | API or extra-usage costs beside the time window where provider and model usage moved |
+| Multiple AI tools, no unified view | One dropdown for Claude, OpenAI, Gemini, Antigravity, Cursor and OpenRouter |
+| Don't know if you'll hit your subscription limit | Projection against reset where the allowance supports it |
+| Menu bar cluttered with providers you don't use | Only the providers you use and choose to see |
+| Running OpenClaw or Hermes with no cost feedback between runs | Usage since you last checked, with provider and model detail and when it moved |
+| Usage changed — when did it happen? | The timeline narrows it to the relevant period, by provider and model |
 
 ---
-
 ## Download
 
-TokMeter is free to download.
+**TokMeter** is free to download.
 
 **Option A — Homebrew**
 
@@ -136,87 +116,84 @@ Homebrew downloads, verifies, and installs TokMeter for you. Launch it from Appl
 
 | Platform | Minimum OS | Download |
 |---|---|---|
-| macOS (Apple Silicon) | 13.0 Ventura | [**Download TokMeter.zip**](https://github.com/Jbsorge/TokMeter-app/releases/latest) |
+| macOS (Apple Silicon) | 13.0 Ventura | [**Download TokMeter.dmg**](https://github.com/Jbsorge/TokMeter-app/releases/latest) |
 
----
+Open `TokMeter.dmg`, double-click TokMeter, and choose **Install**. TokMeter copies itself to Applications and reopens from there. You can then eject the disk image.
 
-## First Launch: macOS Security Prompt
-
-macOS blocks apps from independent developers on first launch. You'll see a popup saying TokMeter can't be opened.
-
-To allow it:
-1. Click **Done** to dismiss the popup
-2. Open **System Settings → Privacy & Security**
-3. Scroll down — you'll see *"TokMeter.app was blocked"*
-4. Click **Open Anyway**
-5. Confirm when prompted
-
-You only need to do this once.
+If macOS unexpectedly rejects a valid download, confirm that it came from the latest release page and try the download again before using any security override.
 
 ---
 
 ## Setup
 
-### API Keys
+**TokMeter** uses the source appropriate to each provider:
 
-TokMeter uses Admin API keys to read your usage data. These are different from the regular API keys you use in your projects.
+| Data | Local source |
+|---|---|
+| Anthropic API spending | Anthropic admin key entered in **Configure API keys...** ([Anthropic console](https://console.anthropic.com)) |
+| OpenAI API spending | OpenAI admin key entered in **Configure API keys...** ([OpenAI settings](https://platform.openai.com/settings/organization/admin-keys)) |
+| Claude subscription allowances | Existing Claude Code sign-in |
+| ChatGPT subscription allowances | Existing Codex CLI sign-in |
+| Gemini / Antigravity | Supported local Gemini or Antigravity sources |
+| Cursor allowances and on-demand spending | Existing signed-in Cursor app |
+| OpenRouter billed usage and credit balance | OpenRouter Management key |
 
-| Provider | Key format | Where to get it |
-|---|---|---|
-| Anthropic | `sk-ant-admin-...` | [console.anthropic.com → Settings → Admin API Keys](https://console.anthropic.com) |
-| OpenAI | `sk-admin-...` | [platform.openai.com → Settings → Admin Keys](https://platform.openai.com/settings/organization/admin-keys) |
-| Gemini | OAuth | Configured via Settings in TokMeter |
+Anthropic and OpenAI admin keys and a manually entered OpenRouter Management key are stored in `~/.usage-monitor/config.json`, readable only by the owning account. Supported OpenRouter environment or local-discovery sources are not copied into it. TokMeter reads Cursor's existing local database in read-only mode and never reads its refresh token.
 
-Enter each key once in **TokMeter Settings**. Keys are stored locally in your system Keychain and remain valid until you revoke them.
-
-### After setup
-
-TokMeter begins tracking immediately. Only the providers you've configured will appear.
+After setup, TokMeter begins checking the available sources. Only providers with a verified connection or eligible saved snapshot appear.
 
 ---
 
 ## Supported Providers & Plans
 
-| Provider | API Tracking | Subscription Tracking |
-|---|---|---|
-| Anthropic Claude | ✅ | ✅ Pro · Max |
-| OpenAI | ✅ | ✅ ChatGPT Plus · GPT Pro |
-| Google Gemini | ✅ | ✅ Gemini Advanced |
+**TokMeter** deliberately focuses on the most widely used AI tools so it stays simple and intuitive while delivering the most value to the most people. New providers are added based on real usage and user requests—not simply to make the list longer.
+
+| Provider | API / extra-usage spending | Subscription allowance |
+|---|---:|---:|
+| Anthropic Claude | Yes | Claude Pro / Max |
+| OpenAI | Yes | ChatGPT Plus / Pro |
+| Google Gemini / Antigravity | Supported local sources | Reported Gemini / Antigravity pools |
+| Cursor | Provider-reported on-demand spending | Plan and model pools where Cursor reports them |
+| OpenRouter | Yes, with per-model detail | Pay-as-you-go; no subscription percentage |
 
 ---
-
 ## FAQ
 
-**Does TokMeter store my API keys on a server?**
-No. Keys are stored in your local system Keychain. TokMeter queries provider APIs directly from your device.
+**Does TokMeter store my credentials on a server?**
 
-**Why do I need an Admin API key? Can I use my regular API key?**
-Usage data — costs, token counts, subscription utilization — is only accessible via Admin API keys. Your regular project API keys don't have read access to usage endpoints.
+TokMeter does not operate a credential-storage server. Keys entered in TokMeter remain in its owner-only local configuration, while supported existing sign-ins are read locally.
+
+**Why do Anthropic and OpenAI API costs need Admin API keys? Can I use a regular project key?**
+
+Their account or organisation usage data requires the corresponding admin credential. Subscription allowances, Cursor and OpenRouter use their own supported local sources instead.
 
 **Why can't I see a provider in the menu bar?**
-TokMeter only shows providers you've configured. If a provider isn't set up in Settings, it won't appear. This is intentional — no noise, no clutter.
+
+TokMeter only shows a provider when it can verify a supported local connection or eligible saved snapshot. A provider or bar you hide stays out of view until you restore it from **Hidden**.
 
 **Does spend projection work for API usage?**
-Spend projection is currently focused on subscription plans, where your usage resets on a fixed date and you need to know if you're on pace. API projection is on the radar.
+
+Spend projection is focused on subscription allowance windows, where usage resets on a known schedule. API or extra-usage spending remains a money total rather than a universal allowance percentage.
 
 **Does TokMeter show per-run costs for OpenClaw?**
-Not exactly. TokMeter shows the delta since the last refresh — broken down by provider, model, and token type. If only one thing was running, that delta is a close proxy for your run cost. With parallel activity, you're reading a combined signal, though the model and token breakdown helps you reason about what did what.
+
+Not exactly. TokMeter shows API or extra usage since you last checked, with provider and model detail where available. Its timeline helps you narrow a change to the relevant part of the hour, even when several things were running at once.
 
 **Is TokMeter open source?**
+
 No. TokMeter is a proprietary app distributed via GitHub Releases.
 
 ---
-
 ## System Requirements
 
-- **macOS:** 13.0 Ventura or later — Apple Silicon (M1/M2/M3/M4)
-- Internet connection for live usage polling
+- **macOS:** 13.0 Ventura or later — Apple Silicon
+- Internet connection for provider usage polling
 
 ---
 
 ## Feature Requests
 
-Have something you'd like to see in TokMeter? [**Open a feature request →**](https://github.com/Jbsorge/TokMeter-app/discussions)
+**Missing a tool, found an issue, or have an idea?** [Tell me here](https://github.com/Jbsorge/TokMeter-app/issues/new?title=Feedback%20or%20provider%20request%3A%20).
 
 ---
 
@@ -225,10 +202,9 @@ Have something you'd like to see in TokMeter? [**Open a feature request →**](h
 TokMeter is proprietary software. All rights reserved. You may not redistribute, reverse-engineer, or modify the application. See [LICENSE](LICENSE) for full terms.
 
 ---
-
 ## Contact
 
-- 💬 **Feature requests & discussion:** [GitHub Discussions](https://github.com/Jbsorge/TokMeter-app/discussions)
+- 💬 **Missing a tool, found an issue, or have an idea?** [Tell me here](https://github.com/Jbsorge/TokMeter-app/issues/new?title=Feedback%20or%20provider%20request%3A%20).
 - 📧 **Everything else:** [hello@tokmeter.app](mailto:hello@tokmeter.app)
 
 ---
