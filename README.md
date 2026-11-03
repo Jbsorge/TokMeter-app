@@ -15,6 +15,27 @@ What did I just use? What did I just spend? How much have I got left? Should I p
 </div>
 
 ---
+## What’s new in 0.2.6: More guests at the table, smoother service, and a closer eye on the bill
+
+- **Two more guests at the table.** GitHub Copilot brings your personal plan’s monthly allowance; Grok brings its weekly allowance and extra-usage credits. They join your other tools in one dropdown. We found room without making the table bigger.
+
+- **Claude goes Ultra.** Claude’s Ultra plan gets its proper name, with Weekly and Fable limits where Claude reports them. A grander name, the same quick glance.
+
+- **The xAI tab, accounted for.** Building with xAI’s API? See its spending today, this month and since your last look, with model detail where xAI supplies it. Even the clever guests get a bill.
+
+- **New tools don’t need a welcoming committee.** Start using a supported tool and TokMeter notices while it’s running, without a restart or reinstall. If API spending needs setup, a small **Set up** offers to help, and **Not now** keeps it quiet.
+
+- **All the introductions, one window.** Manage your provider sign-ins and API reporting in **Settings and Connections**, with subscriptions and API spending clearly separated. Less remembering which door to knock on.
+
+- **Showers, not storms.** For Claude, OpenAI, Cursor and xAI, a damaged part of a reading gets its own warning while usable figures stay visible. One passing cloud doesn’t get to cancel the picnic.
+
+- **Your place at the table is saved.** Restart or update during the day and TokMeter remembers your last check. “Since you last checked” carries on from there, so you can get back to whatever’s cooking.
+
+---
+
+**Safety first.** Reporting keys you save in TokMeter are protected by macOS Keychain. Your existing connections carry on without making you type those keys all over again. You have better things to do with your afternoon.
+
+---
 ## What is TokMeter?
 
 You've spent 12% of your weekly quota since the last time you looked, three hours ago this morning. What was it that spent so much? You go to the Claude dashboard and all you get is one number: 67% used, Fable at 75% of weekly allowance, and reset five days from now at 6:00 pm. Two days into the week, two-thirds already gone — something is wrong, and you can't put your finger on it. What was it, so you can turn it off or calm it down?
@@ -25,7 +46,7 @@ TokMeter stays small. One bar shows where you are, the waveform shows when you g
 
 It tracks only the providers you use, with model-specific limits where they are available. Add API or extra-usage spending too if you need it.
 
-TokMeter is a macOS menu bar app that brings subscription allowances and API or extra-usage spending together across **Anthropic Claude, OpenAI and ChatGPT, Google Gemini and Antigravity, Cursor, and OpenRouter**.
+TokMeter is a macOS menu bar app that brings subscription allowances and API or extra-usage spending together across **Anthropic Claude, OpenAI and ChatGPT, Google Gemini and Antigravity, Cursor, OpenRouter, Grok / xAI, and GitHub Copilot**.
 
 See direct Claude and ChatGPT plans, models bundled with Cursor, and usage routed through OpenRouter in one place. TokMeter makes overlapping usage visible, helping you decide where each kind of work belongs and whether every plan is earning its place.
 
@@ -60,11 +81,13 @@ If you use one but do not want it in view, you can hide it yourself—and bring 
 ### 💰 Multi-Provider Cost Tracking
 Monitor API or extra-usage spending and subscription progress across:
 
-- **Anthropic Claude** — Claude API costs and Claude Pro or Max subscription allowances
+- **Anthropic Claude** — Claude API costs and Claude Pro, Max or Ultra subscription allowances, with limits where Claude reports them
 - **OpenAI** — OpenAI API costs and ChatGPT Plus or Pro subscription allowances
 - **Google Gemini / Antigravity** — supported local API costs and the separate allowance pools the provider reports
-- **Cursor** — plan allowance, Cursor-model and other-model allocation where available, Grok Bot allowance where available, and provider-reported on-demand spending
+- **Cursor** — plan allowance, Cursor-model and other-model allocation where available, and provider-reported on-demand spending
 - **OpenRouter** — today and month-to-date costs, credit balance, and per-model spending detail
+- **Grok / xAI** — Grok Bot weekly allowance and extra-usage credits, plus separately configured xAI API spending
+- **GitHub Copilot** — the personal plan’s monthly allowance
 
 ### 📊 Subscription Spend Projection
 Are you going to hit your usage limit before your plan resets? Or do you have enough headroom to push harder this week?
@@ -72,7 +95,7 @@ Are you going to hit your usage limit before your plan resets? Or do you have en
 Where available, TokMeter projects your allowance windows as readings update, showing whether your current pace is likely to last until reset. Decide whether to throttle back or push while you have room to spare.
 
 ### 🔐 Privacy-First Architecture
-TokMeter uses provider and supported local sources to calculate and display your usage, allowances and costs. It does not extract, display, transmit or persist conversation text. Manually entered Anthropic, OpenAI and OpenRouter keys remain in TokMeter’s owner-only local configuration.
+TokMeter uses provider and supported local sources to calculate and display your usage, allowances and costs. It does not extract, display, transmit or persist conversation text. Reporting keys you save in TokMeter are protected by macOS Keychain.
 
 ### ⚡ A Small Native macOS Menu-Bar App
 TokMeter is a signed macOS menu-bar application, notarised by Apple and built on Python and AppKit. It stays out of the Dock and keeps its interface in the menu bar, where the information is needed.
@@ -93,7 +116,7 @@ Right in your menu bar, while you work.
 | Problem | TokMeter |
 |---|---|
 | Surprise invoice at end of month | API or extra-usage costs beside the time window where provider and model usage moved |
-| Multiple AI tools, no unified view | One dropdown for Claude, OpenAI, Gemini, Antigravity, Cursor and OpenRouter |
+| Multiple AI tools, no unified view | One dropdown for Claude, OpenAI, Gemini, Antigravity, Cursor, OpenRouter, Grok and GitHub Copilot |
 | Don't know if you'll hit your subscription limit | Projection against reset where the allowance supports it |
 | Menu bar cluttered with providers you don't use | Only the providers you use and choose to see |
 | Running OpenClaw or Hermes with no cost feedback between runs | Usage since you last checked, with provider and model detail and when it moved |
@@ -130,15 +153,18 @@ If macOS unexpectedly rejects a valid download, confirm that it came from the la
 
 | Data | Local source |
 |---|---|
-| Anthropic API spending | Anthropic admin key entered in **Configure API keys...** ([Anthropic console](https://console.anthropic.com)) |
-| OpenAI API spending | OpenAI admin key entered in **Configure API keys...** ([OpenAI settings](https://platform.openai.com/settings/organization/admin-keys)) |
+| Anthropic API spending | Anthropic admin key entered in **Settings and Connections → API keys and sign-ins** ([Anthropic console](https://console.anthropic.com)) |
+| OpenAI API spending | OpenAI admin key entered in **Settings and Connections → API keys and sign-ins** ([OpenAI settings](https://platform.openai.com/settings/organization/admin-keys)) |
 | Claude subscription allowances | Existing Claude Code sign-in |
 | ChatGPT subscription allowances | Existing Codex CLI sign-in |
 | Gemini / Antigravity | Supported local Gemini or Antigravity sources |
 | Cursor allowances and on-demand spending | Existing signed-in Cursor app |
 | OpenRouter billed usage and credit balance | OpenRouter Management key |
+| Grok Bot allowance and extra-usage credits | Existing Grok Bot connection; connect in **Settings and Connections** |
+| xAI API spending | xAI Management key with Billing read access, entered in **Settings and Connections** |
+| GitHub Copilot personal allowance | Existing GitHub CLI connection or TokMeter’s GitHub sign-in |
 
-Anthropic and OpenAI admin keys and a manually entered OpenRouter Management key are stored in `~/.usage-monitor/config.json`, readable only by the owning account. Supported OpenRouter environment or local-discovery sources are not copied into it. TokMeter reads Cursor's existing local database in read-only mode and never reads its refresh token.
+Reporting keys you save in TokMeter are protected by macOS Keychain. Supported OpenRouter environment or local-discovery sources are not copied into TokMeter’s configuration. TokMeter reads Cursor's existing local database in read-only mode and never reads its refresh token.
 
 After setup, TokMeter begins checking the available sources. Only providers with a verified connection or eligible saved snapshot appear.
 
@@ -150,18 +176,20 @@ After setup, TokMeter begins checking the available sources. Only providers with
 
 | Provider | API / extra-usage spending | Subscription allowance |
 |---|---:|---:|
-| Anthropic Claude | Yes | Claude Pro / Max |
+| Anthropic Claude | Yes | Claude Pro / Max / Ultra, with limits where reported |
 | OpenAI | Yes | ChatGPT Plus / Pro |
 | Google Gemini / Antigravity | Supported local sources | Reported Gemini / Antigravity pools |
 | Cursor | Provider-reported on-demand spending | Plan and model pools where Cursor reports them |
 | OpenRouter | Yes, with per-model detail | Pay-as-you-go; no subscription percentage |
+| Grok / xAI | xAI API spending and Grok Bot extra usage | Grok Bot weekly allowance where available |
+| GitHub Copilot | Monthly allowance; not API spending | Personal plan’s monthly allowance |
 
 ---
 ## FAQ
 
 **Does TokMeter store my credentials on a server?**
 
-TokMeter does not operate a credential-storage server. Keys entered in TokMeter remain in its owner-only local configuration, while supported existing sign-ins are read locally.
+TokMeter does not operate a credential-storage server. Reporting keys you save in TokMeter are protected by macOS Keychain, while supported existing sign-ins are read locally.
 
 **Why do Anthropic and OpenAI API costs need Admin API keys? Can I use a regular project key?**
 
