@@ -15,23 +15,21 @@ What did I just use? What did I just spend? How much have I got left? Should I p
 </div>
 
 ---
-## What’s new in 0.2.6: More guests at the table, smoother service, and a closer eye on the bill
+## What’s new in 0.2.6: what you used, what you spent, and exactly when it happened
 
-- **Two more guests at the table.** GitHub Copilot brings your personal plan’s monthly allowance; Grok brings its weekly allowance and extra-usage credits. They join your other tools in one dropdown. We found room without making the table bigger.
+Only the AI tools you use. Your allowances, spending and activity over time, together in one quick glance. Here’s what 0.2.6 adds:
 
-- **Claude goes Ultra.** Claude’s Ultra plan gets its proper name, with Weekly and Fable limits where Claude reports them. A grander name, the same quick glance.
+- **Two more guests, Grok and Copilot, in the same glance.** See Grok’s weekly allowance and extra-usage credits, plus Copilot’s personal monthly allowance, alongside your other tools.
 
-- **The xAI tab, accounted for.** Building with xAI’s API? See its spending today, this month and since your last look, with model detail where xAI supplies it. Even the clever guests get a bill.
+- **xAI spending beside your other costs.** See spending today, this month and since your last look, with model detail where xAI supplies it.
+
+- **Claude goes Ultra.** Ultra gets its proper name, with Weekly and Fable readings where reported. TokMeter shows the limits your plan actually has.
 
 - **New tools don’t need a welcoming committee.** Start using a supported tool and TokMeter notices while it’s running, without a restart or reinstall. If API spending needs setup, a small **Set up** offers to help, and **Not now** keeps it quiet.
 
-- **All the introductions, one window.** Manage your provider sign-ins and API reporting in **Settings and Connections**, with subscriptions and API spending clearly separated. Less remembering which door to knock on.
+- **One place to manage connections.** **Settings and Connections** brings sign-ins and API reporting into one window, keeping subscription allowances and API spending clearly separated.
 
-- **Showers, not storms.** For Claude, OpenAI, Cursor and xAI, a damaged part of a reading gets its own warning while usable figures stay visible. One passing cloud doesn’t get to cancel the picnic.
-
-- **Your place at the table is saved.** Restart or update during the day and TokMeter remembers your last check. “Since you last checked” carries on from there, so you can get back to whatever’s cooking.
-
----
+- **Keep track between glances.** Restart or update during the day and TokMeter remembers your last check. “Since you last checked” carries on from there, so you can get back to whatever’s cooking.
 
 **Safety first.** Reporting keys you save in TokMeter are protected by macOS Keychain. Your existing connections carry on without making you type those keys all over again. You have better things to do with your afternoon.
 
