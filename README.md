@@ -15,23 +15,27 @@ What did I just use? What did I just spend? How much have I got left? Should I p
 </div>
 
 ---
-## What’s new in 0.2.6: what you used, what you spent, and exactly when it happened
+## What's new in 0.2.7: built for shared Macs and busy providers
 
-Only the AI tools you use. Your allowances, spending and activity over time, together in one quick glance. Here’s what 0.2.6 adds:
+- **TokMeter for every user of the Mac.** Every user who logs on to the Mac can install and run TokMeter independently, with their own settings and history. Each user sees the accounts signed in on their own login. **Use the same AI account on your work login and your personal login, and you'll see the same figures.**
 
-- **Two more guests, Grok and Copilot, in the same glance.** See Grok’s weekly allowance and extra-usage credits, plus Copilot’s personal monthly allowance, alongside your other tools.
+- **When a provider is busy.** If the provider says "too many requests", TokMeter is a proper doorman. Instead of letting everyone rush to the door at once, it spaces out the checks, in agreement with Anthropic or the other provider, and tells you who's limiting it and when it will try again. For example: "limited by Anthropic · next try 22:19". It keeps your last reading on screen and remembers the wait even after a restart.
 
-- **xAI spending beside your other costs.** See spending today, this month and since your last look, with model detail where xAI supplies it.
+- **Clear status at startup.** After a restart, your last figures stay on screen marked "checking…" while the fresh ones are brought to the table. TokMeter sips its coffee while the croissants arrive, with no needless sign-in requests.
 
-- **Claude goes Ultra.** Ultra gets its proper name, with Weekly and Fable readings where reported. TokMeter shows the limits your plan actually has.
+- **Sign-in reminders that don't get in the way.** If a sign-in needs renewing, you get a notification and a row you can click. Everything else keeps updating normally in the meantime.
 
-- **New tools don’t need a welcoming committee.** Start using a supported tool and TokMeter notices while it’s running, without a restart or reinstall. If API spending needs setup, a small **Set up** offers to help, and **Not now** keeps it quiet.
+- **Surprise resets taken into account.** If a provider resets everyone's allowance in the middle of a period, TokMeter notices and counts your usage from the fresh start.
 
-- **One place to manage connections.** **Settings and Connections** brings sign-ins and API reporting into one window, keeping subscription allowances and API spending clearly separated.
+- **Cursor's new sign-in method supported.** macOS may ask once whether TokMeter can read it; say yes and you're set.
 
-- **Keep track between glances.** Restart or update during the day and TokMeter remembers your last check. “Since you last checked” carries on from there, so you can get back to whatever’s cooking.
+- **Today and this month, side by side.** Hover over Claude, OpenAI, Gemini, Cursor extra usage or xAI to see today's figures next to the month's.
 
-**Safety first.** Reporting keys you save in TokMeter are protected by macOS Keychain. Your existing connections carry on without making you type those keys all over again. You have better things to do with your afternoon.
+- **Fresh prices, including next month's.** Claude Fable 5.2, Gemini 4 Carbon and Gemini 4 Hydrogen are in, and TokMeter already knows about Google's December and January price changes.
+
+- **More reliable updates.** Updates now finish cleanly, whatever else your Mac is busy with.
+
+**Safety first.** Every user on a shared Mac keeps their own sign-ins, settings and history. TokMeter never peeks next door.
 
 ---
 ## What is TokMeter?
